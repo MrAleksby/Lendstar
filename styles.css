@@ -551,11 +551,35 @@ h1, h2, h3, h4, h5, h6 {
 .footer-link {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, box-shadow 0.3s, background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(139, 90, 60, 0.10);
+    margin-left: 8px;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+}
+
+.footer-link svg {
+    width: 28px;
+    height: 28px;
+    display: block;
 }
 
 .footer-link:hover {
-    color: white;
+    color: var(--color-primary);
+    background: var(--color-secondary);
+    box-shadow: 0 4px 16px rgba(139, 90, 60, 0.18);
+    transform: translateY(-2px) scale(1.08);
 }
 
 .footer-bottom {
