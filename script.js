@@ -1,33 +1,33 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
-    // Telegram button functionality
-    const telegramButtons = document.querySelectorAll('#telegramButton, #finalTelegramButton, #mobileStickyButton, #heroQuickButton');
+    // Telegram button functionality - DISABLED to use direct HTML links
+    // const telegramButtons = document.querySelectorAll('#telegramButton, #finalTelegramButton, #mobileStickyButton, #heroQuickButton');
     
-    telegramButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
+    // telegramButtons.forEach(button => {
+    //     button.addEventListener('click', function(e) {
+    //         e.preventDefault();
             
-            // Add visual feedback
-            const originalText = this.innerHTML;
-            this.innerHTML = '<span>Переходим в Telegram...</span>';
+    //         // Add visual feedback
+    //         const originalText = this.innerHTML;
+    //         this.innerHTML = '<span>Переходим в Telegram...</span>';
             
-            // Add haptic feedback on mobile
-            if (window.navigator.vibrate) {
-                window.navigator.vibrate(50);
-            }
+    //         // Add haptic feedback on mobile
+    //         if (window.navigator.vibrate) {
+    //             window.navigator.vibrate(50);
+    //         }
             
-            // Simulate redirect to Telegram (replace with actual link)
-            setTimeout(() => {
-                // Replace this with your actual Telegram channel link
-                window.open('https://t.me/your_channel_link', '_blank');
+    //         // Simulate redirect to Telegram (replace with actual link)
+    //         setTimeout(() => {
+    //             // Replace this with your actual Telegram channel link
+    //             window.open('https://t.me/LTYH5', '_blank');
                 
-                // Restore button text
-                setTimeout(() => {
-                    this.innerHTML = originalText;
-                }, 2000);
-            }, 500);
-        });
-    });
+    //             // Restore button text
+    //             setTimeout(() => {
+    //                 this.innerHTML = originalText;
+    //             }, 2000);
+    //         }, 500);
+    //     });
+    // });
 
     // Intersection Observer for fade-in animations
     const observerOptions = {
@@ -184,14 +184,14 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', revealOnScroll);
 
     // Add haptic feedback for mobile interactions
-    const addHapticFeedback = (element) => {
+        const addHapticFeedback = (element) => {
         if (window.navigator.vibrate) {
-            element.addEventListener('touchstart', () => {
+                element.addEventListener('touchstart', () => {
                 window.navigator.vibrate(20);
-            });
-        }
-    };
-
+                });
+            }
+        };
+        
     // Add haptic feedback to interactive elements
     const interactiveElements = document.querySelectorAll('.btn-primary, .benefit-card, .freedom-card, .reason-card, .value-card');
     interactiveElements.forEach(addHapticFeedback);
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
-
+    
     setVH();
     window.addEventListener('resize', setVH);
 
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Prevent zoom on input focus
             const inputs = document.querySelectorAll('input, textarea, select');
             inputs.forEach(input => {
-                input.addEventListener('focus', () => {
+            input.addEventListener('focus', () => {
                     input.style.fontSize = '16px';
                 });
             });
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCounter();
         });
     };
-
+    
     // Trigger counter animation when stats section is visible
     const statsSection = document.querySelector('.hero-stats');
     if (statsSection) {
@@ -281,25 +281,25 @@ const mobileStatsAnimation = () => {
             const number = stat.querySelector('.stat-number');
             if (number) {
                 const target = parseInt(number.textContent);
-                let current = 0;
-                const increment = target / 50;
-                
-                const updateStat = () => {
+                    let current = 0;
+                    const increment = target / 50;
+                    
+                    const updateStat = () => {
                     if (current < target) {
                         current += increment;
                         number.textContent = Math.ceil(current);
-                        requestAnimationFrame(updateStat);
-                    } else {
+                            requestAnimationFrame(updateStat);
+                        } else {
                         number.textContent = target;
-                    }
-                };
-                
+                        }
+                    };
+                    
                 setTimeout(updateStat, index * 200);
-            }
-        });
+                }
+            });
     }
-};
-
+    };
+    
 // Initialize mobile animations
 if (window.innerWidth <= 768) {
     mobileStatsAnimation();

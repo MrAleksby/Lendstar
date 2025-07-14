@@ -202,6 +202,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+.highlight-amount {
+  color: var(--color-accent);
+  font-weight: 600;
+  background: rgba(212, 165, 116, 0.10);
+  border-radius: 6px;
+  padding: 0.1em 0.4em;
+  font-size: 1.08em;
+  transition: background 0.3s;
+}
+
 .hero-subtitle {
     font-size: 1.3rem;
     color: var(--color-text-secondary);
@@ -550,7 +560,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-bottom {
     text-align: center;
-    padding-top: var(--spacing-md);
+        padding-top: var(--spacing-md);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.5);
 }
@@ -624,7 +634,7 @@ h1, h2, h3, h4, h5, h6 {
 .progress-labels {
     display: flex;
     justify-content: space-between;
-    margin-bottom: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
     font-weight: 600;
     color: var(--color-primary);
 }
@@ -663,8 +673,8 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--spacing-xl);
     align-items: start;
     max-width: 900px;
-    margin: 0 auto;
-}
+        margin: 0 auto;
+    }
 .author-image {
     text-align: center;
 }
@@ -682,7 +692,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .author-text p {
     margin-bottom: var(--spacing-md);
-    font-size: 1.1rem;
+        font-size: 1.1rem;
     line-height: 1.7;
     color: var(--color-text-secondary);
 }
@@ -700,8 +710,8 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: none;
 }
 .country {
-    font-weight: 600;
-    color: var(--color-primary);
+        font-weight: 600;
+        color: var(--color-primary);
     margin-right: var(--spacing-sm);
 }
 
@@ -715,11 +725,11 @@ h1, h2, h3, h4, h5, h6 {
         min-height: 80vh;
         padding: var(--spacing-xl) 0;
     }
-
+    
     .hero-title {
         font-size: 2.5rem;
     }
-
+    
     .hero-subtitle {
         font-size: 1.1rem;
     }
@@ -738,7 +748,7 @@ h1, h2, h3, h4, h5, h6 {
     .hero-description p {
         font-size: 1rem;
     }
-
+    
     .section-title {
         font-size: 2rem;
     }
@@ -778,7 +788,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .mobile-sticky-cta {
-        display: block;
+    display: block;
         width: calc(100% - 40px);
         max-width: 300px;
     }
@@ -788,13 +798,13 @@ h1, h2, h3, h4, h5, h6 {
     }
     .challenge-goal {
         font-size: 1rem;
-        padding: var(--spacing-md);
+    padding: var(--spacing-md);
     }
 
     .author-content {
         grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-        text-align: center;
+    gap: var(--spacing-lg);
+    text-align: center;
     }
     .author-photo {
         width: 150px;
@@ -820,7 +830,7 @@ h1, h2, h3, h4, h5, h6 {
     .value-card {
         padding: var(--spacing-md);
     }
-
+    
     .cta-title {
         font-size: 1.8rem;
     }
