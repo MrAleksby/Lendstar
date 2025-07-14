@@ -865,3 +865,16 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.9rem;
     }
 } 
+
+.footer-links a:not(.footer-link) {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right: 18px;
+    transition: color 0.3s;
+}
+.footer-links a:not(.footer-link):hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+} 
