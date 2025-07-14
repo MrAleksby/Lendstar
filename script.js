@@ -257,6 +257,16 @@ document.addEventListener('DOMContentLoaded', function() {
         
         statsObserver.observe(statsSection);
     }
+
+    // Days left to 25 January 2030
+    const daysLeftEl = document.getElementById('daysLeft');
+    if (daysLeftEl) {
+        const now = new Date();
+        const target = new Date('2030-01-25T00:00:00');
+        const diff = target - now;
+        const days = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+        daysLeftEl.textContent = days;
+    }
 });
 
 // Mobile-specific animations
