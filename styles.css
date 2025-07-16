@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 2px;
 }
 
-/* Buttons - Gentle and Inviting */
+/* Buttons - Clear and Obvious */
 .btn-primary, .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -89,38 +89,55 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     border-radius: 12px;
     font-family: var(--font-body);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     letter-spacing: 0.3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid transparent;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--color-primary), #a67c5a);
     color: white;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 6px 20px rgba(139, 90, 60, 0.3);
+    border: 2px solid var(--color-primary);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(139, 90, 60, 0.4);
     background: linear-gradient(135deg, #a67c5a, var(--color-primary));
+    border: 2px solid #a67c5a;
+}
+
+.btn-primary:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 90, 60, 0.3);
 }
 
 .btn-secondary {
-    background: transparent;
+    background: white;
     color: var(--color-primary);
-    border: 2px solid var(--color-secondary);
+    border: 3px solid var(--color-primary);
+    box-shadow: 0 4px 12px rgba(139, 90, 60, 0.2);
 }
 
 .btn-secondary:hover {
-    background: var(--color-secondary);
+    background: var(--color-primary);
     color: white;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(139, 90, 60, 0.3);
+    border: 3px solid var(--color-primary);
+}
+
+.btn-secondary:active {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(139, 90, 60, 0.2);
 }
 
 .btn-large {
@@ -135,6 +152,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover .btn-arrow {
     transform: translateX(4px);
+}
+
+/* Button icons */
+.btn-primary img,
+.btn-secondary img,
+.mobile-sticky-cta img,
+.btn-gallery img {
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-primary:hover img,
+.btn-secondary:hover img,
+.mobile-sticky-cta:hover img,
+.btn-gallery:hover img {
+    transform: scale(1.1);
 }
 
 /* Hero Section - Warm Welcome */
@@ -225,17 +259,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-quick-cta .btn-secondary {
-    background: var(--color-surface);
+    background: white;
     color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    border: 3px solid var(--color-primary);
     font-size: 1.1rem;
-    padding: var(--spacing-sm) var(--spacing-xl);
+    font-weight: 600;
+    padding: var(--spacing-md) var(--spacing-xl);
+    box-shadow: 0 6px 20px rgba(139, 90, 60, 0.25);
+    position: relative;
 }
 
 .hero-quick-cta .btn-secondary:hover {
     background: var(--color-primary);
     color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(139, 90, 60, 0.35);
+}
+
+.hero-quick-cta .btn-secondary:active {
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 90, 60, 0.25);
 }
 
 .hero-description {
@@ -595,18 +638,19 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary), #a67c5a);
     color: white;
-    border: none;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: 25px;
+    border: 3px solid var(--color-primary);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 50px;
     font-size: 1rem;
-    font-weight: 500;
-    box-shadow: var(--shadow-lg);
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(139, 90, 60, 0.4);
     z-index: 1000;
     cursor: pointer;
     transition: all 0.3s ease;
     display: none;
+    letter-spacing: 0.5px;
 }
 
 .mobile-sticky-cta.visible {
